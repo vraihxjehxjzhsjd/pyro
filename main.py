@@ -1,8 +1,5 @@
 import pyrogram
 
-global count, trigger, message
-trigger = "а"
-count = 0
 with open("message.txt", "r+") as file:
     message = file.read().split("\n")
     file.close()
